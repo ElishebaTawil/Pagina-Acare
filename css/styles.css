@@ -1942,7 +1942,16 @@ progress {
     -webkit-overflow-scrolling: touch;
   }
 }
+/*----------------------------------------------footer arreglado yo para q esten lasa cosas uno abajo de la otra*/
 @media (max-width: 991.98px) {
+  .footer2v {
+    display: flex;
+    flex-direction: column;
+  }
+  .LogoUade{
+    text-align: center;
+    margin-left: 8rem;
+  }
   .table-responsive-lg {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -9336,7 +9345,11 @@ textarea.form-control-lg {
     text-align: center !important;
   }
 }
+/*-------------------------------------------*/
 @media (min-width: 992px) {
+  
+  
+
   .float-lg-start {
     float: left !important;
   }
@@ -10929,7 +10942,7 @@ img{
 }
 /*-------------------------------------*/
 /*footer--------------------------------------*/
-.footerYo{
+/*.footerYo{
   border-top: 3px solid #382315;
   display: flex;
   justify-content: space-around;
@@ -10938,6 +10951,7 @@ img{
   padding-top: 1rem;
   font-size: small;
 }
+
 .textoCopy{
   color:#382315;
   
@@ -10946,6 +10960,7 @@ img{
   white-space: nowrap;
 
 }
+*/
 
 .LogoUade{
   /*width: 9rem;*/
@@ -10953,7 +10968,14 @@ img{
   /*margin-right: 3rem;
   margin-left: 3rem;*/
   
+  
 }
+.LogoC{
+  /*width: 7rem;*/
+  margin-right: 5rem;
+  
+}
+/*
 .LogoUade img{
   width: 150px;
   height: 50px;
@@ -10965,13 +10987,21 @@ img{
   height: 50px;
   
 }
-
-.LogoC{
-  /*width: 7rem;*/
-  margin-right: 5rem;
+*/
+.LogoUade img{
+  width: 9.375rem;
+  height: 3.125rem;
   
 
 }
+.LogoC img{
+  width: 3.125rem;
+  height:3.125rem;
+  
+}
+
+
+
 
 
 /*---------------------------------*/
@@ -10988,6 +11018,8 @@ img{
   flex: 1;
   text-align: left;
   margin-left: 5rem;
+  display: flex;
+  gap: 1rem;
   
 
 }
@@ -10995,8 +11027,7 @@ img{
   flex:2;
   text-align: center;
   margin-left: 5rem;
-  display: flex;
-  gap: 1rem;
+  
 }
 .column3{
   flex:3;
@@ -11004,4 +11035,7 @@ img{
   margin-right: 5rem;
   margin-left: 0%;
   padding-left: 0%;
+}
+.column1, .column2, .column3 {
+  flex: 1; /* Hace que las secciones ocupen un espacio igual y se ajusten al ancho del contenedor */
 }
