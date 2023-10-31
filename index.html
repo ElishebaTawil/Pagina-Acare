@@ -34,8 +34,8 @@
                                 <li><a class="dropdown-item" href="almohadones.html">Almohadones</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="#!">Quiénes Somos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">Contacto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="quienes_somos.html">Quiénes Somos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
                         
                     </ul>
                     
@@ -54,6 +54,9 @@
         <header>
             <section class="pad">
                 <div class="sec">
+                    
+                    
+                    <!--
                     <div class="CarruselPortada img-fluid">
                         <img style="width: 100%;"  src="fotosPag/sillon/SG14.avif" alt="foto portada">
                     </div>
@@ -62,7 +65,59 @@
                             <p>It's not for us, <br>it's for them</p>  
                 
                         </div>
+                    </div>  -->
+                
+                    <div class="container">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Indicadores de imágenes -->
+                        <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                        </ol>
+
+                        <!-- Imágenes del carrusel -->
+                        <div class="carousel-inner">
+                        <div class="CarruselPortada img-fluid carousel-item active">
+                            <img style="width: 100%;" src="fotosPag/sillon/SG14.avif" alt="Imagen 1">
+                        </div>
+                        <div class="CarruselPortada img-fluid carousel-item">
+                            <img style="width: 100%;" src="fotosPag/almohadon/AL11.avif" alt="Imagen 2">
+                        </div>
+                        <div class="CarruselPortada img-fluid carousel-item">
+                            <img style="width: 100%;" src="fotosPag/silla/SI4_2.jpg" alt="Imagen 3">
+                        </div>
+                        <div class="CarruselPortada img-fluid carousel-item">
+                            <img style="width: 100%;" src="fotosPag/sillonChico/SC4.avif" alt="Imagen 4">
+                        </div>
+                        <div class="CarruselPortada img-fluid carousel-item">
+                            <img style="width: 100%;" src="fotosPag/respaldo/ri3.avif" alt="Imagen 5">
+                        </div>
+                        </div>
+
+                        <!-- Botones de navegación -->
+                        <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                        </a>
                     </div>
+                    </div>
+                    <div class="text-center " >
+                        <div class="textoPortada display-6 fw-bolder">
+                            <p>It's not for us,it's for them</p>  
+                
+                        </div>
+                    </div> 
+                
+
+
+                
+                
+                
+                
+                
                 </div>
             </section>
         </header>
@@ -70,6 +125,11 @@
         
         <!-- Section CARD-->
         <main>
+            <section class="PrdoDescText">
+                <h3>Productos Destacados</h3>
+
+            </section>
+
             <section class="py-5">
                 <div class="container px-4 px-lg-5 mt-5">
                     <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
@@ -270,9 +330,11 @@
             </section>
             <section class="column2">
                 <p class="m-0 text-cenetr">Trabajo grupal | Diseño y desarrollo web</p>
+                <p class="m-0 text-center" >Fotos sacadas de freepik, libre de derechos de Autor</p>
                 <p class="m-0 text-cenetr">Nahuel D'Angelo, Elisheba Tawil</p>
                 <p class="m-0 text-center">Tomás Iriarte, Lucas Giménez</p>
                 <p class="m-0 text-center" >Copyright &copy; Grupo6 2023</p>
+                
             </section>
 
             <section class="column3">
@@ -287,6 +349,10 @@
         
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
     </body>

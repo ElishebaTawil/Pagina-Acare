@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Pagina Acare</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Navigation-->   <!--style="background-color: #382315;"-->
+        <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #382315; " >
+            <div class="container px-4 px-lg-5">
+                <img class="LogoAcare" src="img/sinfondo.png" alt="logo acare">
+                <a class="navbar-brand" href="#!" style="margin-right: 12rem;">Acare</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4" >
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Inicio</a></li>
+                        <li class="nav-item dropdown">
+                            <!--la barra desplegable de los productos-->
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Productos</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="sillones.html">Sillones</a></li>
+                                <li><a class="dropdown-item" href="sillonesChicos.html">Sillones Chicos</a></li>
+                                <li><a class="dropdown-item" href="sillas.html">Sillas</a></li>
+                                <li><a class="dropdown-item" href="respaldos.html">Respaldos</a></li>
+                                <li><a class="dropdown-item" href="almohadones.html">Almohadones</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="quienes_somos.html">Quiénes Somos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                        
+                    </ul>
+                    
+                    <!--carrito-->
+                    <form class="d-flex">
+                        <button class="btn btn-outline-dark2" type="submit">
+                            <i class="bi-cart-fill me-1"></i>
+                            
+                            <span class="badge  text-white ms-1 ">0</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!-- Header-->
+        <header>
+            <section class="bienvenidos text-cenetr text-white ">
+                <p style="text-align: center; font-size: 20px;">
+                    ¿Tienes preguntas, comentarios o necesitas asistencia? Estamos aquí para ayudarte. ¡No dudes en ponerte en contacto con nosotros!
+                </p>
+            </section>
+        </header>
+        
+        
+        <main>
+            <section class="cuadroContacto">
+                <form class="contact-form" onsubmit="return validateForm()">
+                    <div class="contact-form-group">
+                      <label for="name" class="contact-label">Nombre:</label>
+                      <input type="text" id="name" class="contact-input" placeholder="Ingrese su nombre" maxlength="50" required />
+                      <div id="name-error" class="error-message"></div>
+                    </div>
+                    <div class="contact-form-group">
+                      <label for="email" class="contact-label">Correo electrónico:</label>
+                      <input type="email" id="email" class="contact-input" placeholder="Ingrese su correo electrónico" required />
+                      <div id="email-error" class="error-message"></div>
+                    </div>
+                    <div class="contact-form-group">
+                      <label for="message" class="contact-label">Mensaje:</label>
+                      <textarea id="message" class="contact-input" placeholder="Ingrese su mensaje" required></textarea>
+                      <div id="message-error" class="error-message"></div>
+                    </div>
+                    <button type="submit" class=" contact-submit-button btn btn-outline-dark contact-submit-button" >Enviar</button>
+                    <div id="success-message" class="success-message"></div>
+                  </form>
+            </section>
+
+                
+
+            
+
+        </main>
+        
+        <!-- Footer-->
+        <footer class="footer2v bg-white">
+            <section class="column1">
+                <a class="LogoC " href="mailto:sabuttawil@gmail.com" target="_blank">
+                    <img src="img/instagram-logo.png" alt="iconoInstagram">
+                </a>
+                
+                <a class="LogoC"  href="mailto:sabuttawil@gmail.com" target="_blank">
+                    <img src="img/newsletter_logo.png" alt="iconoGmail">
+                </a>
+            
+                <a class="LogoC" href="https://api.whatsapp.com/send?phone=5491134989592" target="_blank">
+                    <img src="img/whatsapp-logo_nvo.png" alt="whatsappLogo">
+                </a>
+                    
+                
+            </section>
+            <section class="column2">
+                <p class="m-0 text-cenetr">Trabajo grupal | Diseño y desarrollo web</p>
+                <p class="m-0 text-center" >Fotos sacadas de freepik, libre de derechos de Autor</p>
+                <p class="m-0 text-cenetr">Nahuel D'Angelo, Elisheba Tawil</p>
+                <p class="m-0 text-center">Tomás Iriarte, Lucas Giménez</p>
+                <p class="m-0 text-center" >Copyright &copy; Grupo6 2023</p>
+            </section>
+
+            <section class="column3">
+                <div class="LogoUade" > <img src="img/uade-logo_nvo.jpg" alt="logo uade"></div>
+            </section>
+
+        </footer>
+
+        
+        
+        
+        
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
