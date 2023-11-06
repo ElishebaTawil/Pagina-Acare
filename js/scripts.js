@@ -1,62 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
-
-function validateForm() {
-  // Validar nombre (solo letras y números)
-  var nameInput = document.getElementById("name");
-  var nameError = document.getElementById("name-error");
-  var namePattern = /^[a-zA-Z\s]+$/; // Expresión regular para validar solo letras
-  if (namePattern.test(nameInput.value.trim())) {
-    nameError.style.display = "none";
-  } else {
-    nameError.innerHTML = "Ingrese un nombre válido (solo letras)";
-    nameError.style.display = "block";
-    return false;
-  }
-
-  // Validar correo electrónico
-  var emailInput = document.getElementById("email");
-  var emailError = document.getElementById("email-error");
-  var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Expresión regular para validar correo electrónico
-  if (!emailPattern.test(emailInput.value)) {
-    emailError.innerHTML = "Ingrese un correo electrónico válido";
-    emailError.style.display = "block";
-    return false;
-  } else {
-    emailError.style.display = "none";
-  }
-
-  // Validar mensaje (debe tener contenido)
-  var messageInput = document.getElementById("message");
-  var messageError = document.getElementById("message-error");
-  if (messageInput.value.trim() === "") {
-    messageError.innerHTML = "Ingrese un mensaje";
-    messageError.style.display = "block";
-    return false;
-  } else {
-    messageError.style.display = "none";
-  }
-
-  // Mostrar mensaje de confirmación
-  var successMessage = document.getElementById("success-message");
-  successMessage.innerHTML = "¡Sus datos han sido enviados correctamente!";
-  successMessage.style.display = "block";
-
-  // Restablecer formulario después de 3 segundos
-  setTimeout(function() {
-    document.getElementById("contact-form").reset();
-    successMessage.style.display = "none";
-  }, 3000);
-
-  // Vaciar los campos del formulario
-nameInput.value = "";
-emailInput.value = "";
-messageInput.value = "";
-
-  return false;
-}
-
-
-
 /*--------------carrito de compras--------------*/
 
 const btnCart = document.querySelector('.btn-outline-dark2');
@@ -80,6 +21,15 @@ const valorTotal = document.querySelector('.total-pagar');
 const countProducts = document.querySelector('.ms-1');
 const cartEmpty = document.querySelector('.cart-empty');
 const cartTotal = document.querySelector('.cart-total');
+
+document.addEventListener('DOMContentLoaded', () => {
+  const productsInStorage = localStorage.getItem('cartProducts');
+
+  if (productsInStorage) {
+    allProducts = JSON.parse(productsInStorage);
+    showHTML();
+  }
+});
 
 
 productsList.addEventListener('click', e => {
@@ -109,6 +59,7 @@ productsList.addEventListener('click', e => {
 		} else {
 			allProducts = [...allProducts, infoProduct];
 		}
+    localStorage.setItem('cartProducts', JSON.stringify(allProducts));
 
 		showHTML();
 	}
@@ -122,7 +73,7 @@ rowProduct.addEventListener('click', e => {
 			product => product.title !== title
 		);
 
-		console.log(allProducts);
+		localStorage.setItem('cartProducts', JSON.stringify(allProducts));
 
 		showHTML();
 	}
@@ -179,5 +130,71 @@ const showHTML = () => {
 
 	valorTotal.innerText = `$${total}`;
 	countProducts.innerText = totalOfProducts;
+
+    // Verificar si se eliminaron todos los productos
+    if (allProducts.length === 0) {
+      cartEmpty.innerText = 'El carrito está vacío';
+    } else {
+      cartEmpty.innerText = ''; // Vaciar el texto del mensaje de carrito vacío
+    }
+  
 };
-});
+
+
+
+
+
+function validateForm() {
+  // Validar nombre (solo letras y números)
+  var nameInput = document.getElementById("name");
+  var nameError = document.getElementById("name-error");
+  var namePattern = /^[a-zA-Z\s]+$/; // Expresión regular para validar solo letras
+  if (namePattern.test(nameInput.value.trim())) {
+    nameError.style.display = "none";
+  } else {
+    nameError.innerHTML = "Ingrese un nombre válido (solo letras)";
+    nameError.style.display = "block";
+    return false;
+  }
+
+  // Validar correo electrónico
+  var emailInput = document.getElementById("email");
+  var emailError = document.getElementById("email-error");
+  var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Expresión regular para validar correo electrónico
+  if (!emailPattern.test(emailInput.value)) {
+    emailError.innerHTML = "Ingrese un correo electrónico válido";
+    emailError.style.display = "block";
+    return false;
+  } else {
+    emailError.style.display = "none";
+  }
+
+  // Validar mensaje (debe tener contenido)
+  var messageInput = document.getElementById("message");
+  var messageError = document.getElementById("message-error");
+  if (messageInput.value.trim() === "") {
+    messageError.innerHTML = "Ingrese un mensaje";
+    messageError.style.display = "block";
+    return false;
+  } else {
+    messageError.style.display = "none";
+  }
+
+  // Mostrar mensaje de confirmación
+  var successMessage = document.getElementById("success-message");
+  successMessage.innerHTML = "¡Sus datos han sido enviados correctamente!";
+  successMessage.style.display = "block";
+
+  // Restablecer formulario después de 3 segundos
+  setTimeout(function() {
+    document.getElementById("contact-form").reset();
+    successMessage.style.display = "none";
+  }, 3000);
+
+  // Vaciar los campos del formulario
+nameInput.value = "";
+emailInput.value = "";
+messageInput.value = "";
+
+  return false;
+}
